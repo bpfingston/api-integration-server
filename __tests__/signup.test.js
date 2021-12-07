@@ -1,8 +1,8 @@
 const supertest = require('supertest');
-const { server } = require('../lib/app');
+const { app } = require('../lib/server');
 const { db } = require('../lib/model/index');
 
-const mockRequest = supertest(server);
+const mockRequest = supertest(app);
 
 beforeAll( (done) => {
   db.sync();

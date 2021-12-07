@@ -1,7 +1,7 @@
 'use strict';
 
 require('dotenv');
-const SECRET = process.env.SECRET;
+const SECRET = process.env.SECRET || 'secret';
 const supertest = require('supertest');
 const server = require('../lib/server.js');
 const { db } = require('../lib/model/index');
